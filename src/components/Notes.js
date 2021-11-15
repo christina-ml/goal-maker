@@ -31,6 +31,18 @@ class Notes extends React.Component {
     })
   }
 
+  // makes a copy of our previous array
+  handleDeleteNote = (noteToDelete) => {
+    let filteredNotes = this.state.notes.filter((note)=>{
+      return note !== noteToDelete;
+    })
+
+    this.setState({
+      notes: filteredNotes,
+    })
+  }
+
+
   render() {
     let notesToDisplay = this.state.notes.map((note)=>{
       return <Note myNote={note}/>
