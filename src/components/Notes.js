@@ -12,16 +12,17 @@ class Notes extends React.Component {
   }
 
   render() {
+    let notesToDisplay = this.state.notes.map((note)=>{
+      return <Note note={note}/>
+    })
+    
     return (
       <div className="notes">
         <h2>Notes</h2>
         <input type="text" />
         <button>Add note</button>
         <div className="note-container">
-          <Note />
-          <Note />
-          <Note />
-          <Note />
+          {notesToDisplay}
         </div>
       </div>
     );
