@@ -15,6 +15,7 @@ class Notes extends React.Component {
     this.setState({
       noteInput: event.target.value,
     })
+    console.log("noteInput is: ", this.state.noteInput);
   }
 
   render() {
@@ -25,7 +26,7 @@ class Notes extends React.Component {
     return (
       <div className="notes">
         <h2>Notes</h2>
-        <textarea />
+        <textarea onChange={this.handleNoteInput}/>
         <button>Add note</button>
         <div className="note-container">
           {notesToDisplay}
