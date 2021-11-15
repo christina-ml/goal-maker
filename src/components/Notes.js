@@ -11,6 +11,12 @@ class Notes extends React.Component {
     }
   }
 
+  handleNoteInput = (event) => {
+    this.setState({
+      noteInput: event.target.value,
+    })
+  }
+
   render() {
     let notesToDisplay = this.state.notes.map((note)=>{
       return <Note myNote={note}/>
