@@ -37,7 +37,7 @@ class Notes extends React.Component {
     return (
       <div className="notes">
         <h2>Notes</h2>
-        <textarea onChange={this.handleNoteInput}/>
+        <textarea value={this.state.noteInput} onChange={this.handleNoteInput}/>
         <button onClick={this.handleAddNote}>Add note</button>
         <div className="note-container">
           {notesToDisplay}
