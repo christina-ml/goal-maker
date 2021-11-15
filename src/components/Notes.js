@@ -2,6 +2,15 @@ import React from "react";
 import Note from "./Note";
 
 class Notes extends React.Component {
+  constructor(){
+    super();
+
+    this.state = {
+      noteInput: '',
+      notes: [],
+    }
+  }
+
   render() {
     return (
       <div className="notes">
