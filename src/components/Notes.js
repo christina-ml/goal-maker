@@ -18,9 +18,14 @@ class Notes extends React.Component {
     console.log("noteInput is: ", this.state.noteInput);
   }
 
+  /* using spread operator to make copy of array - 
+  -  you're not modifyingthe array directly. You're, making an entirely new copy, and replacing the existing one.
+  - .push doesn't make a copy of an array.
+  */
   handleAddNote = () => {
     this.setState({
       notes: [...this.state.notes, this.state.noteInput],
+      noteInput: '',
     })
   }
 
