@@ -25,7 +25,7 @@ class Notes extends React.Component {
     return (
       <div className="notes">
         <h2>Notes</h2>
-        <input type="text" />
+        <textarea />
         <button>Add note</button>
         <div className="note-container">
           {notesToDisplay}
