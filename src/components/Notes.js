@@ -13,7 +13,7 @@ class Notes extends React.Component {
 
   render() {
     let notesToDisplay = this.state.notes.map((note)=>{
-      return <Note note={note}/>
+      return <Note myNote={note}/>
     })
     
     return (
