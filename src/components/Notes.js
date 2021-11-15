@@ -19,7 +19,9 @@ class Notes extends React.Component {
   }
 
   /* using spread operator to make copy of array - 
-  -  you're not modifyingthe array directly. You're, making an entirely new copy, and replacing the existing one.
+  -  you're not modifying the array directly. You're, making an entirely new copy, and replacing the existing one.
+  - can use spread operator to make a copy of an objects as well.
+  - it's a "shallow copy" that the spread operator makes.
   - .push doesn't make a copy of an array.
   */
   handleAddNote = () => {
@@ -37,7 +39,10 @@ class Notes extends React.Component {
     return (
       <div className="notes">
         <h2>Notes</h2>
-        <textarea value={this.state.noteInput} onChange={this.handleNoteInput}/>
+        <textarea 
+          value={this.state.noteInput} 
+          onChange={this.handleNoteInput}
+        />
         <button onClick={this.handleAddNote}>Add note</button>
         <div className="note-container">
           {notesToDisplay}
