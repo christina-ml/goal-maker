@@ -44,8 +44,11 @@ class Notes extends React.Component {
 
 
   render() {
-    let notesToDisplay = this.state.notes.map((note)=>{
-      return <Note myNote={note}/>
+    let notesToDisplay = this.state.notes.map((note, i)=>{
+      return <Note 
+        key={note + i}
+        myNote={note} 
+        handleDeleteNote={this.handleDeleteNote}/>
     })
     
     return (

@@ -8,6 +8,10 @@ class Note extends React.Component {
         <div>
           {this.props.myNote}
         </div>
+        {/* pass in the argument of the note that we want to delete, using an anonymous function */}
+        <button onClick={()=>this.props.handleDeleteNote(this.props.note)}>
+          Delete
+        </button>
       </div>
     );
   }
